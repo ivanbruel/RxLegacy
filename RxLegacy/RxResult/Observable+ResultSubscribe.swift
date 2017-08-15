@@ -11,13 +11,13 @@ import RxSwift
 import Result
 import RxResult
 
-extension ObservableType where E: ResultProtocol {
+public extension ObservableType where E: ResultProtocol {
 
-  func subscribeSuccess(_ onSuccess: @escaping (Self.E.Value) -> Void) -> Disposable {
+  public func subscribeSuccess(_ onSuccess: @escaping (Self.E.Value) -> Void) -> Disposable {
     return subscribeResult(onSuccess: onSuccess)
   }
 
-  func subscribeFailure(_ onFailure: @escaping (Self.E.Error) -> Void) -> Disposable {
+  public func subscribeFailure(_ onFailure: @escaping (Self.E.Error) -> Void) -> Disposable {
     return subscribeResult(onFailure: onFailure)
   }
 }

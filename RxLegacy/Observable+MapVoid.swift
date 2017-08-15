@@ -9,14 +9,14 @@
 import Foundation
 import RxSwift
 
-extension ObservableType {
+public extension ObservableType {
 
   /**
    Helpful function to be able to abstract observable sequences into void.
    e.g. Observable.just(something).mapVoid()
    - returns: anything is turned into void
    */
-  func mapVoid() -> Observable<Void> {
+  public func mapVoid() -> Observable<Void> {
     return map { _ in Void() }
   }
 }

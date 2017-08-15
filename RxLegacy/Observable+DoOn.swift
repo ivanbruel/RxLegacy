@@ -9,25 +9,25 @@
 import Foundation
 import RxSwift
 
-extension ObservableType {
+public extension ObservableType {
 
-  func doOnNext(_ onNext: @escaping (E) throws -> Void) -> Observable<E> {
+  public func doOnNext(_ onNext: @escaping (E) throws -> Void) -> Observable<E> {
     return `do`(onNext: onNext)
   }
 
-  func doOnError(_ onError: @escaping (Error) throws -> Void) -> Observable<E> {
+  public func doOnError(_ onError: @escaping (Error) throws -> Void) -> Observable<E> {
     return `do`(onError: onError)
   }
 
-  func doOnCompleted(_ onCompleted: @escaping () throws -> Void) -> Observable<E> {
+  public func doOnCompleted(_ onCompleted: @escaping () throws -> Void) -> Observable<E> {
     return `do`(onCompleted: onCompleted)
   }
 
-  func doOnDispose(_ onDispose: @escaping () -> Void) -> Observable<E> {
+  public func doOnDispose(_ onDispose: @escaping () -> Void) -> Observable<E> {
     return `do`(onDispose: onDispose)
   }
 
-  func doOnSubscribe(_ onSubscribe: @escaping () -> Void) -> Observable<E> {
+  public func doOnSubscribe(_ onSubscribe: @escaping () -> Void) -> Observable<E> {
     return `do`(onSubscribe: onSubscribe)
   }
 

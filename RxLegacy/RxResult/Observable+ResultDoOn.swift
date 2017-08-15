@@ -11,13 +11,13 @@ import RxSwift
 import Result
 import RxResult
 
-extension ObservableType where E: ResultProtocol {
+public extension ObservableType where E: ResultProtocol {
 
-  func doOnSuccess(_ onSuccess: @escaping (Self.E.Value) throws -> Void) -> Observable<E> {
+  public func doOnSuccess(_ onSuccess: @escaping (Self.E.Value) throws -> Void) -> Observable<E> {
     return `do`(onSuccess: onSuccess)
   }
 
-  func doOnFailure(_ onFailure: @escaping (Self.E.Error) throws -> Void) -> Observable<E> {
+  public func doOnFailure(_ onFailure: @escaping (Self.E.Error) throws -> Void) -> Observable<E> {
     return `do`(onFailure: onFailure)
   }
 }
