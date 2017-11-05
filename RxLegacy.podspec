@@ -44,7 +44,7 @@ subscribeFailure, doOnFailure and doOnSucccess.
     ss.source_files = "RxLegacy/RxResult/*"
     ss.dependency "RxLegacy/Core"
     ss.dependency "Result", '~> 3.2'
-    ss.dependency "RxResult", '~> 2.0'
+    ss.dependency "RxResult", '~> 2.1'
   end
 
 end
