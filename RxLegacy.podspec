@@ -37,7 +37,7 @@ subscribeFailure, doOnFailure and doOnSucccess.
 
   s.subspec "Core" do |ss|
     s.source_files = 'RxLegacy/*'
-    s.dependency 'RxSwift', '~> 3.6'
+    s.dependency 'RxSwift', '~> 4.0'
   end
 
   s.subspec "RxResult" do |ss|
